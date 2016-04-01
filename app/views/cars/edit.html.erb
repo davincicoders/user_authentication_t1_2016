@@ -1,0 +1,13 @@
+<div class="page-header">
+  <%= link_to cars_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to @car, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-info-sign"></span>
+    Show
+  <% end %>
+  <h1>Editing car</h1>
+</div>
+
+<%= render 'form' %>
