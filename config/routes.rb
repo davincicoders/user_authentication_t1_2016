@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
   get 'static_pages/about'
+
+  resources :users, only: [:new, :create],
+            path_names: { new: 'signup' }
+
+  get 'login' => 'sessions#login'
+  post 'login' => 'sessions#create'
 
   resources :cars
   # The priority is based upon order of creation: first created -> highest priority.
